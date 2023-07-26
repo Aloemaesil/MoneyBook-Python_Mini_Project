@@ -51,7 +51,6 @@ def create_new_file(file_name):
     
     return True
 # ================ AWS function ================
-# ================ CRUD function ================
 # 데이터 초기화
 def initData():
     global boardNum
@@ -67,6 +66,7 @@ def initData():
     price = []
     etc = []
 
+# ================ CRUD function ================
 # 데이터 추가(Create)
 def createData(inputDate, inputPos, inputCategory, inputPrice : int, inputEtc):
     initData()
@@ -152,6 +152,7 @@ def deleteData(selectBoardNum):
     else:
         print("입력하신 거래번호가 존재하지 않습니다.")
 # ================ CRUD function ================
+
 # ================ Gradio function ================
 # GUI의 입력 버튼 액션
 def createAction():
@@ -199,6 +200,7 @@ def deleteAction():
                            inputs=([selectBoardNum]), 
                            outputs=None)
 # ================ Gradio function ================
+
 def interface():
     with gr.Blocks() as app_interface:
         with gr.Tab("조회"):
